@@ -1,9 +1,8 @@
-FBox crearCajaRaw(float w, float h, color c, float g) {
+FBox crearCajaRaw(float w, float h, float g) {
   float x = random(50, width - w - 50);
-  float y = random(50, height - h - 50);
+  float y = random(500, height - h );
   FBox main = new FBox(w, h);
   main.setPosition(x, y);
-  main.setFillColor(c);
   main.setFriction(1);
   float we = (w / 30);
   float he = (h / 30);

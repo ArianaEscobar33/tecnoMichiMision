@@ -1,11 +1,20 @@
 void pantallaJuego() {
   background(fondo);
+  
+  // Actualiza y dibuja el mundo de física
   mundo.step();
   mundo.draw();
-
-  if (ganaste) {
-    fill(255, 0, 0);
-    textSize(32);
-    text("¡Ganaste!", width / 2 - 80, height / 2);
+  
+  // Cambiar la visibilidad de la garra según el estado de la mano
+  if (manoAbierta == true && manoCerrada == false) {
+    garraAbierta.attachImage(garra_abierta); // Asigna la imagen a la garra cerrada
+    garraAbierta.setPosition(x, y); // Actualizar la posición de la garra cerrada
+  } else if (manoAbierta == false && manoCerrada == true) {
+    garraAbierta.attachImage(garra_cerrada); // Asigna la imagen a la garra cerrada
+    garraAbierta.setPosition(x, y); // Actualizar la posición de la garra cerrada
   }
+  
+  
+  
+ 
 }
