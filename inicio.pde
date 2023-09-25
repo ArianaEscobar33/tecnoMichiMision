@@ -2,6 +2,7 @@ void pantallaInicio() {
   background(inicio);
   fill(255, 0, 0);
   rect(350, 300, 100, 50);
+  garraAbiertaCerrada();
 }
 
 void botonInicio() {
